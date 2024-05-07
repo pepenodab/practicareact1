@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const changerFormat = ({ dateTime }) => {
-  const date = new Date(dateTime).toLocaleDateString('es-ES', {
+const Card = ({ character }) => {
+  const options = {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric'
-  });
-  return date;
-};
+  };
 
-const Card = ({ character }) => {
+  const newDate = (oldDate) => {
+    const date = new Date(oldDate);
+    return date.toLocaleDateString('es-ES', options);
+  };
+
   return (
     <>
       <div className="profile">
@@ -30,7 +32,7 @@ const Card = ({ character }) => {
               <p>{character.species}</p>
               <p>{character.gender}</p>
               <p>{character.location}</p>
-              <p>{changerFormat(character.created)}</p>
+              <p>{newDate(character.created)}</p>
             </div>
           </div>
         </div>
