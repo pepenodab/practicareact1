@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import './Footer.css';
 
 const Footer = ({ year }) => {
   return (
     <>
-      <h5>{year} All right reserved</h5>
+      <footer>
+        <p>{year} All right reserved</p>
+      </footer>
     </>
   );
 };

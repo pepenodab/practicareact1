@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header__subtitle {
+  margin: 0;
+}

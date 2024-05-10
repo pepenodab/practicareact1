@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './Card.css';
+import style from './card.module.css';
 
 const Card = ({ character }) => {
   const options = {
@@ -17,18 +17,22 @@ const Card = ({ character }) => {
   return (
     <>
       <div className="profile">
-        <div className="container">
-          <div className="profile__wrapper">
-            <div className="profile__avatar">
-              <img src={`src/images/${character.id}.jpeg`} alt="" />
+        <div className={style.container}>
+          <div className={style.profile__wrapper}>
+            <div>
+              <img
+                src={`src/images/${character.id}.jpeg`}
+                alt=""
+                className={style.profile__avatar}
+              />
             </div>
-            <div className="profile__h3">
+            <div className={style.profile__name}>
               <h3>{character.name}</h3>
             </div>
             <div className="profile__status">
               <p>{character.status}</p>
             </div>
-            <div className="profile__learnmore">
+            <div className={style.profile__information}>
               <p>{character.species}</p>
               <p>{character.gender}</p>
               <p>{character.location}</p>
