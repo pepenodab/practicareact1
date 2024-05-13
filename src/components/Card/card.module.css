@@ -1,3 +1,7 @@
+:root {
+  --color-primary: #0a6efc;
+}
+
 .container {
   max-width: 100%;
   width: 100%;
@@ -13,6 +17,10 @@
   color: black;
   width: 50rem;
   height: 25rem;
+  display: inline-block;
+}
+
+.profile__id {
   display: flex;
 }
 
@@ -32,15 +40,73 @@
 }
 
 .profile__status {
-  display: flex;
+  text-align: left;
+  margin-top: -1.5rem;
+  margin-left: 1.4rem;
+  padding: 0;
+}
+
+.isAlive {
+  width: 4rem;
+  text-align: center;
+  border-radius: 15px 15px;
+  color: #73b57d;
+  background-color: #eef6ef;
+}
+
+.isDead {
+  color: #f47d7e;
+  background-color: #fdeff0;
+  border-radius: 15px 15px;
+  width: 4rem;
+  text-align: center;
+}
+
+.icons {
+  color: var(--color-primary);
+  margin-right: 0.4rem;
 }
 
 .profile__information {
-  background-color: red;
-  margin-left: -40%;
-  margin-top: 15%;
+  color: gray;
+  text-align: left;
+  margin-left: 1rem;
+  margin-top: 0;
   left: 10px;
 }
 
-.profile__information-p {
+.profile__buttons {
+  margin-top: 3rem;
+  width: 96%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  text-decoration: none;
+}
+
+.button_profile {
+  width: 49%;
+  background-color: #e8e8ec;
+  color: black;
+  text-decoration: none;
+}
+
+.button_profile_background {
+  width: 49%;
+  background-color: #e8e8ec;
+}
+
+.button_contact {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  width: 49%;
+  margin-left: 0.3rem;
+}
+
+.button_contact_background {
+  margin-left: 0.3rem;
+  width: 49%;
+  background-color: var(--color-primary);
 }
